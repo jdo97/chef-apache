@@ -16,3 +16,8 @@ end
 describe port(80), :skip do
   it { should_not be_listening }
 end
+
+# This checks to see if apache was installed.
+describe package('httpd') do 
+  it { should be_installed } 
+end 
